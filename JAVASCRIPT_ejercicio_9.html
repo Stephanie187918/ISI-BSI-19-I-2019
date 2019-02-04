@@ -1,0 +1,50 @@
+!doctype  html>
+
+<head>
+
+<meta charset="utf-8"/>
+
+<title>Ejercicio 9 JAVASCRIPT</title>
+ 
+<script type="text/javascript">
+
+function palindromo(cadena) {
+ 
+  var resultado = "La cadena \""+cadena+"\" \n";
+  var cadenaOriginal = cadena.toLowerCase();
+  var letrasEspacios = cadenaOriginal.split("");
+  var cadenaSinEspacios = "";
+  for(i in letrasEspacios) {
+    if(letrasEspacios[i] != " ") {
+      cadenaSinEspacios += letrasEspacios[i];
+    }
+  }
+ 
+  var letras = cadenaSinEspacios.split("");
+  var letrasReves = cadenaSinEspacios.split("").reverse();
+  var iguales = true;
+  for(i in letras) {
+    if(letras[i] == letrasReves[i]) {
+    }
+    else {
+      iguales = false;
+    }
+  }
+ 
+  if(iguales) {
+    resultado += " Si es un palindromo";
+  }
+  else {
+    resultado += " No es un palindromo";
+  }
+ 
+  return resultado;
+}
+ 
+alert(palindromo("isaacnoroncaasi"));
+</script>
+</head>
+ 
+<body>
+</body>
+</html>

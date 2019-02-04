@@ -1,0 +1,57 @@
+<h2>Formulario:</h2>
+
+	
+	Texto:<textarea name="Texto"cols="90"rows="3"/></textarea><br/><br/>
+
+    Nombre:<br><br>
+	
+    <input type="text" name="Nombre:" maxlength="50"><br><br>
+	
+	Primer apellido:<br><br>
+	
+    <input type="text" name="Primer apellidos:" maxlength="50"><br><br>
+	
+    Segundo apellido:<br><br>
+	
+    <input type="text" name="Segundo apellidos:" maxlength="50"><br><br>
+	
+    Genero:<br><br>
+	
+    <select name="genero">
+        <option value="Mujer">Mujer</option>
+        <option value="Hombre">Hombre</option>
+    </select> <br><br>
+	
+	Idiomas:<br><br>
+	
+    <input type="checkbox" name="idiomas[]" value="inglés">Inglés</input>
+	<input type="checkbox" name="idiomas[]" value="español" checked="checked">Español</input>
+    <input type="checkbox" name="idiomas[]" value="Portugues">Portugues</input><br><br>
+	
+    Nacionalidad:<br><br>
+    <input type="radio" name="nacionalidad" value="Costarricense">Costarricense</input>
+    <input type="radio" name="nacionalidad" value="otra">Otra</input><br><br>
+	
+	// Boton 
+    <input type="submit" name="submit" value="Enviar"><br><br>
+	
+    // Botón de enviar
+    <input type="submit" name="submit" value="Enviar"><br><br>
+	
+	//Datos por Post
+	
+	<form action="../../form-result.php" method="post" target="_blank">
+
+  <p>
+
+    Confites: <input type="range" name="Confites" min="0" max="255" step="15">
+
+    <input type="submit" value="Enviar datos">
+
+  </p>
+
+</form>
+	
+</form>
+</body>
+</html>
