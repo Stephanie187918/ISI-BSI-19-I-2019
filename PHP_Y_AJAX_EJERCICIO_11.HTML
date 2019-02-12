@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	
+<title>Ejercicio 11</title>
+				
+
+<script src="http://www.google.com/jsapi"></script>
+<script>google.load("jquery", "1");</script>
+
+
+<script type='text/javascript'>
+
+
+$(document).ready(function () 
+{
+	
+			
+$('#igual').click(function() 
+{ 
+procesar();
+});
+});
+		
+function procesar()
+{
+	$.ajax ({ 
+				
+		url:'calcular.php',
+		type:'post',
+		data:$('#formulario').serialize(),
+
+
+				success: 	function(request, settings)
+				{
+					
+					$('#mensaje').css('color', '#0ab53a');
+					
+					$('#mensaje').html("Acci�n realizada exitosamente");
+					
+					$('#resultado').html(request);
+				},
+				
+				error: 	function(request, settings)
+					
+					$('#mensaje').css('color', '#ff0e0e');
+					
+					$('#mensaje').html('Error: ' + request.responseText);
+					
+					$('#resultado').html('Error');
+				}				
+			});
+		}
+		
+</script>
+
+	</head>
+
+	<body>
+		
+		<div id='pagina'>
+			<div id='mensaje'>&nbsp;</div>
+			
+			<form id='formulario' action='#' method='post'>
+				<input type='text' id='operando1' name='operando1' value='' size='4' maxlength='4' />
+				
+				<select id='operador' name='operador'>
+					<option value='SU'>+</option>
+					<option value='RE'>-</option>
+					<option value='MU'>*</option>
+					<option value='DI'>/</option>
+				</select>
+				
+				<input type='text' id='operando2' name='operando2' value='' size='4' maxlength='4' />
+				
+				<input type='button' id='igual' value='=' />
+				
+				<span id='resultado'>&nbsp;</span>
+			</form>
+		</div>
+	</body>
+</html>
