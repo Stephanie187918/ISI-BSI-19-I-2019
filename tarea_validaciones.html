@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<body>
+
+<form action="validaciones.php" method="post"meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+        Nombre: <input type="text" placeholder="Digite su nombre"name="nombre"oninput=""validar("nombre") required pattern="([A-Za-z)]{3,20})"><br><br>
+	
+   
+ 	Apellido: <input type="text"placeholder="Digite sus apellidos" name="apellido"oninput=""validar("apellido") required pattern="([A-Za-z)]{3,20})"
+
+ 	 title="Letras y números. Tamaño mínimo: 3. Tamaño máximo: 20"><br><br>
+	 
+	Contraseña:
+
+<input type="password" placeholder="Password1" id="password1" required pattern="(^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$)">
+<br><br>
+
+	Confirme contraseña:
+
+<input type="password" placeholder="Password2" id="password2" required pattern="(^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$)">
+<br><br>
+
+	
+        Correo Electronico:
+<input type="email" name="Correo" class="correo" placeholder="Correo" oninput=""validar("correo") required pattern="(^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$)"><br><br>
+
+	
+	Fecha de nacimiento: <input type="date" name="fecha"><br><br>
+	
+	Campo vacio:
+<input type="hidden" name="opcion" value=""><br><br>
+	
+    <input type="submit" value="Enviar"><br><br>
+
+
+</body>
+</html>
